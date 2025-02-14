@@ -1,4 +1,5 @@
 package gastosPersonales;
 
-public class Cuenta g{
+public class Cuenta{
+
 }

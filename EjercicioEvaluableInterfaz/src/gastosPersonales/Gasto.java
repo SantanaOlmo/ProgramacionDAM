@@ -3,8 +3,8 @@ import depurar.*;
 
 public class Gasto extends Dinero{
 
-    Gasto(double gasto, String descripcion){
-
+    Gasto(){
+        super();
     }
 
     @Override

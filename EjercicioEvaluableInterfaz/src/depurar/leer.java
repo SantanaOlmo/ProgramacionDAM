@@ -4,7 +4,7 @@ public class leer {
 
 
 
-     public static int depurarNumSwitch(Scanner leer){
+     public static int NumSwitch(Scanner leer){
          int numero=0;
 
          System.out.println("Introduzca una de las opciones");
@@ -18,7 +18,7 @@ public class leer {
              numero=Integer.parseInt(num);
              return numero;
          }else{
-             return 0;
+             return 7;
          }
      }
 

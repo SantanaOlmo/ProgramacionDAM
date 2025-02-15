@@ -9,7 +9,7 @@ import java.util.*;
     private ArrayList <Ingreso> ingresos= new ArrayList<>();
 
     Cuenta (Usuario usuario){
-
+        usuario.saludar();
     }
 
     double getSaldo(){

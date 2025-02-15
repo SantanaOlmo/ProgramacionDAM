@@ -14,7 +14,7 @@ public class Menu {
                         "4 Mostrar ingresos \n" +
                         "5 Mostrar saldo \n" +
                         "0 Salir ");
-                switch (depurar.leer.NumSwitch(leer)){
+                switch (depurar.leer.numSwitch()){
                     case 1:
                         System.out.println("Ha elegido: \n" +
                                 "1. Introducir un nuevo ingreso \n");

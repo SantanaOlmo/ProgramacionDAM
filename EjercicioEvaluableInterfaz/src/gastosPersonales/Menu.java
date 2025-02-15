@@ -61,6 +61,7 @@ public class Menu {
                          break;
                     case 0:
                         System.out.println("\u001B[33m" + "Fin del programa.\nGracias por utilizar la aplicación."+"\u001B[0m");
+                        System.out.println("\n Puedes encontrar este ejercicio en GitHub:\n https://github.com/SantanaOlmo/ProgramacionDAM/tree/main/EjercicioEvaluableInterfaz");
                         on=false;
                          break;
                     default:

@@ -2,11 +2,12 @@ package depurar;
 import java.util.*;
 public class leer {
     static Scanner leer= new Scanner (System.in);
+    static Scanner leerstring =new Scanner (System.in);
      public static int numSwitch(){
          int numero=0;
 
-         System.out.println("Introduzca una de las opciones");
-         String num= leer.nextLine();
+         System.out.println("\nIntroduzca una de las opciones");
+         String num= leerstring.nextLine();
 
          //elimino todos los espacioes en blanco
          num = num.replaceAll("\\s+", "");
@@ -61,4 +62,43 @@ public class leer {
         return fecha;
 
      }
+
+     public static double dinero(){
+         boolean on=true;
+         String respuesta="";
+         int dinero=0;
+         while (on){
+            try{
+                System.out.println("Inserte una cantidad de dinero.");
+                dinero=leer.nextInt();
+                if (dinero>0) {
+                    on=false;
+                }else{
+                    System.out.println("Introduzca una cantidad válida.");
+
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Inserte caracteres numéricos.");
+                leer.next();
+            }
+         }
+         return dinero;
+     }
+
+     public static String descripcion(){
+
+
+         System.out.println("Escriba una descripción.");
+         String descripcion=leerstring.nextLine();
+
+         if (descripcion.replaceAll("\\s+","").matches("")){
+             return "#sin_descripcion";
+
+         }else{
+           return descripcion;
+         }
+
+     }
+
+
 }

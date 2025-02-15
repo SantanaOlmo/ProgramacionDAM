@@ -1,5 +1,9 @@
 package gastosPersonales;
 import depurar.leer.*;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
 public class Usuario implements Persona{
 
     private String nombre;
@@ -10,6 +14,9 @@ public class Usuario implements Persona{
         //a los set, envío depurados el nombre y la fecha de nacimiento
         setNombre(depurar.leer.nombre());
         setFechaNacimieinto(depurar.leer.fechaNacimiento());
+        //AÑADIR EL DNI
+
+
     }
     String getNombre(){
         return nombre;
@@ -38,9 +45,15 @@ public class Usuario implements Persona{
 
     @Override
     public int calcularEdad() {
-        getFechaNacimiento();
-
-        return 0;
+        // genero un formato para las fechas con nombre formateador
+        DateTimeFormatter formateador=DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        // la fecha de nacimiento la establezco con getFechaNacimiento aplicando el formateador
+        LocalDate fechaNacimiento=LocalDate.parse(getFechaNacimiento(),formateador);
+        //recibo la fecha actual
+        LocalDate fechaActual=LocalDate.now();
+        //calculo los años que hay entre la fecha de nacimiento y la fecha actual
+        int edad= Period.between(fechaNacimiento,fechaActual).getYears();
+        return edad;
     }
 
     @Override

@@ -9,6 +9,6 @@ public class Gasto extends Dinero{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "[Gasto: "+ getDinero()+ "€\n Descripción: "+ getDescripcion();
     }
 }

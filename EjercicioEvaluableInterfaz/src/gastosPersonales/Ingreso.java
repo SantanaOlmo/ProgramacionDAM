@@ -8,6 +8,6 @@ public class Ingreso extends Dinero{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Ingreso: "+ getDinero()+"€ \n Descripción: "+ getDescripcion();
     }
 }

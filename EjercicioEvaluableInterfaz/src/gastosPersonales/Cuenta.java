@@ -16,18 +16,16 @@ import java.util.*;
         return saldo;
     }
     void setSaldo(double saldo){
-        this.saldo=saldo;
+        this.saldo+=saldo;
     }
     Usuario getUsuario(){
         return usuario;
     }
-    double addIngresos(String descripcion, double cantidad){
+    void addIngresos(){
         ingresos.add(new Ingreso());
-        return 0;
     }
-    double addGastos(String descripcion, double cantidad){
+    void addGastos(){
         gastos.add(new Gasto());
-        return 0;
     }
     ArrayList<Ingreso> getIngresos(){
         return ingresos;

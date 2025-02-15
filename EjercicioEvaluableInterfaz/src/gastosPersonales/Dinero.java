@@ -10,12 +10,10 @@ public abstract class Dinero {
     }
 
     double getDinero(){
-
         return dinero;
     }
 
     void setDinero (double dinero){
-
         this.dinero= dinero;
     }
 

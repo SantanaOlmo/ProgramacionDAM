@@ -14,7 +14,7 @@ public class Usuario implements Persona{
         //a los set, envío depurados el nombre y la fecha de nacimiento
         setNombre(depurar.leer.nombre());
         setFechaNacimieinto(depurar.leer.fechaNacimiento());
-        //AÑADIR EL DNI
+        setDNI(depurar.leer.dNI());
 
 
     }
@@ -33,8 +33,8 @@ public class Usuario implements Persona{
     String getDNI(){
         return DNI;
     }
-    boolean setDNI(){
-        this.DNI=DNI;
+    boolean setDNI(String dni){
+        this.DNI=dni;
         return true;
     }
 

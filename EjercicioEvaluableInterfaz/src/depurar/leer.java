@@ -1,5 +1,6 @@
 package depurar;
 import java.util.*;
+import gastosPersonales.Cuenta;
 public class leer {
     static Scanner leer= new Scanner (System.in);
     static Scanner leerstring =new Scanner (System.in);
@@ -41,6 +42,22 @@ public class leer {
 
      public static String dNI(){
         String dni="";
+        boolean on=true;
+                 System.out.println("Introduzca su número de DNI");
+        while (on){
+                 dni=leer.nextLine();
+
+                if(dni.length()<8 || !dni.matches("^\\d+$")){
+                    System.out.println("Recuerde, el número de su DNI está compuesto por 8 números naturales");
+                }else{
+
+                        dni=dni+"-"+""+letraDNI(Integer.parseInt(dni));
+                        on=false;
+                        break;
+
+                }
+
+        }
 
         return dni;
      }
@@ -100,5 +117,9 @@ public class leer {
 
      }
 
+     public static Character letraDNI(int numDni){
+        char letrasDNI[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+        return letrasDNI[numDni%23];
+     }
 
 }

@@ -4,7 +4,6 @@ import depurar.*;
 public class Menu {
     Scanner leer= new Scanner(System.in);
     Menu(){
-
         Usuario user= new Usuario();
         System.out.println("Acceso autorizado a la aplicación. Tu edad es: " + user.calcularEdad()+ " años.");
         System.out.println("Su DNI ha sido asignado como: "+ user.getDNI());
@@ -61,7 +60,7 @@ public class Menu {
 
                          break;
                     case 0:
-                        System.out.println("\n Gracias, hasta la próxima 👋");
+                        System.out.println("\u001B[33m" + "Fin del programa.\nGracias por utilizar la aplicación."+"\u001B[0m");
                         on=false;
                          break;
                     default:

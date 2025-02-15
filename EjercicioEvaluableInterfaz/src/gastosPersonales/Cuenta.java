@@ -15,6 +15,7 @@ import java.util.*;
     double getSaldo(){
         return saldo;
     }
+
     void setSaldo(double saldo){
         this.saldo+=saldo;
         if(this.saldo==0){
@@ -23,9 +24,11 @@ import java.util.*;
             System.out.println("\u001B[31m"+"‼️ Aviso! Estás en negativo ‼️"+"\u001B[0m");
         }
     }
+
     Usuario getUsuario(){
         return usuario;
     }
+
     void addIngresos(){
         ingresos.add(new Ingreso());
         //al set saldo mando los ingresos
@@ -38,9 +41,11 @@ import java.util.*;
         setSaldo((-1)*gastos.getLast().getDinero());
 
     }
+
     ArrayList<Ingreso> getIngresos(){
         return ingresos;
     }
+
     ArrayList<Gasto>getGastos(){
         return gastos;
     }

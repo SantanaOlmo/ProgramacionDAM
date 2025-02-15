@@ -51,7 +51,7 @@ public class leer {
                     System.out.println("Recuerde, el número de su DNI está compuesto por 8 números naturales");
                 }else{
 
-                        dni=dni+"-"+""+letraDNI(Integer.parseInt(dni));
+                        dni=dni+"-"+""+getletraDNI(Integer.parseInt(dni));
                         on=false;
                         break;
 
@@ -117,7 +117,7 @@ public class leer {
 
      }
 
-     public static Character letraDNI(int numDni){
+     public static Character getletraDNI(int numDni){
         char letrasDNI[] = {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
         return letrasDNI[numDni%23];
      }

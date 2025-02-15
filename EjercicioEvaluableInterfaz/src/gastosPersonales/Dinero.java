@@ -5,6 +5,7 @@ public abstract class Dinero {
     protected String descripcion;
 
     Dinero(){
+        //todo lo depuro y leo en la clase leer del paquete depurar
         setDinero(depurar.leer.dinero());
         setDescripcion(depurar.leer.descripcion());
     }
@@ -20,6 +21,7 @@ public abstract class Dinero {
     String getDescripcion(){
         return descripcion;
     }
+
     void setDescripcion(String descripcion){
         this.descripcion=descripcion;
     }
